@@ -5,8 +5,6 @@ const dotenv = require("dotenv")
 const mysql = require('mysql2')
 const { create } = require('domain')
 
-const { signUp } = require('./services/userService');
-const { allpostView, usersPost, createPost} = require('./services/postService');
 
 dotenv.config()
 
@@ -29,6 +27,9 @@ app.get("/ping", async(req, res) => {
     { message:"pong" }
   )
 })
+module.exports = { appDataSource} ;
+const { signUp } = require('./services/userService');
+const { allpostView, usersPost, createPost} = require('./services/postService');
 
 // 2. 우리의 Express app에 회원가입 하는 함수 연결
 // 2-1. HTTP method와 HTTP url 같이 설정 하여 연결

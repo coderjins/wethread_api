@@ -1,3 +1,4 @@
+const { appDataSource } = require('../app');
 //게시글 등록 코드 by.진서
 const createPost = async(req,res) => {
   const postTitle = req.body.title

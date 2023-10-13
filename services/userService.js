@@ -1,3 +1,4 @@
+const { appDataSource } = require('../app');
 // 1. 회원가입 하는 함수 생성
 const signUp = async(req, res) => {
   // 1-0. 호출되었는지 확인
